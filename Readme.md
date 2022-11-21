@@ -1,6 +1,6 @@
 # Read Me
 
-This is a base scaffolding package for building and publishing javascript and/or typescript applications to a single
+This^1^ is a base scaffolding package for building and publishing javascript and/or typescript applications to a single
 CommonJS and ECMAScript distribution.
 
 # Features
