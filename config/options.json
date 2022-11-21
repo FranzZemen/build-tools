@@ -25,10 +25,32 @@
       "json": "test"
     }
   },
-  "testing": {
+  "testingFramework": {
     "default": "mocha",
-    "frameworks": [
-      "mocha"
+    "choices": [
+      "jasmine",
+      "jest",
+      "mocha",
+      "node"
     ]
+  },
+  "assertionLibrary": {
+    "default": "chai",
+    "choices": [
+      "chai",
+      "jasmine",
+      "jest",
+      "node"
+    ]
+  },
+  "useTypescript": true,
+  "optionalDependencies": {
+    "typescript": {
+      "default": "@latest"
+    },
+    "mocha": {
+      "default": "@latest"
+    }
+  }
   }
 }

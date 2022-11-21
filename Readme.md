@@ -1,6 +1,6 @@
 # Read Me
 
-This<sup>1</sup> is a base scaffolding package for building and publishing javascript and/or typescript applications to a single
+This is a base scaffolding package for building and publishing javascript and/or typescript applications to a single
 CommonJS and ECMAScript distribution.
 
 # Features
@@ -9,7 +9,7 @@ CommonJS and ECMAScript distribution.
 |------------|------------------------------------------|:------------------:|:---------:|
 |||||
 | bootstrap  | Supports bootstrapping                   |       0.0.1        | Pre-Alpha |
-| mocha      | Supports mocha test framework*           ||
+| mocha      | Supports mocha test framework*           |       0.0.1        | Pre-Alpha |
 | md         | Supports markdown source                 |       0.0.1        | Pre-Alpha |
 | json       | Supports json source                     |       0.0.1        | Pre-Alpha |
 | typescript | Supports Typescript source               |       0.0.1        | Pre-Alpha |
@@ -20,32 +20,55 @@ CommonJS and ECMAScript distribution.
 
 # Critical Dependencies
 
-Ensure the dependencies are properly installed at the minimum version listed.  Prior versions may work, they just haven't
-been tested.  Report any successes or issues with these!
+Critical dependencies mean that functionality internal to build-tools depends on these in a way that would
+render build-tools useless without them.
 
 - **[nodejs][]**
 - **Package Manager** ([npm][] | [pnpm][] | [yarn][] | [no package manager][])
 
-| Critical Dependency | Supported Versions                                            |
-|---------------------|---------------------------------------------------------------|
-| [nodejs][]          | LTS Versions since 16:  >= 16.13.0 <= 16.18.1<br/>>= 18.12.0  |
-| [npm][]             | If using npm, >= 5.2                                          |
-| [pnpm][]            | If using pnpm, >= 7.17                                        |
-| [yarn][]            | If using yarn, >= 3.30                                        |                                                             
+| Critical Dependency | Supported Versions<sup>1</sup>                               | Bootstrap?<sup>2</sup> |
+|---------------------|--------------------------------------------------------------|:----------------------:|
+| [nodejs][]          | LTS Versions since 16:  >= 16.13.0 <= 16.18.1<br/>>= 18.12.0 |           No           |
+| [npm][]             | If using npm, >= 5.2                                         |           No           |
+| [pnpm][]            | If using pnpm, >= 7.17                                       |           No           |
+| [yarn][]            | If using yarn, >= 3.30                                       |           No           |                                                             
 
-# Other Dependencies
+1. Prior versions may work, they just haven't been tested.  Report any successes or issues with these!
+2. Indicates whether the bootstrapping process can install these dependencies:
+   1. No: Must be installed prior to using build-tools
+   2. Local: Can be installed by the bootstrapping process, and will be installed locally
+   3. Global: Can be installed by the bootstrapping process, and will be installed globally
 
-| Dependency | Usage                     | Supported Versions |
-|------------|---------------------------|--------------------|
-| Typescript | Include typescript source | >= 4.0.2           |
-| Mocha      | Test with mocha           | >= 10.0.0          |
+# Feature Dependencies
+
+Feature dependencies extend the build-tools usability.  Letting build-tools know you're using them allows 
+build-tools to properly configure itself.  
+
+By default, build-tools will install the latest version.Prior versions may work, they just haven't been tested. Report
+any successes or issues with these!
+
+| Dependency     | Usage                     | Supported Versions<sup>1</sup> | Bootstrap?<sup>2</sup> |
+|----------------|---------------------------|--------------------------------|:----------------------:|
+| [Typescript][] | Include typescript source | >= 4.0.2                       |         Local          |
+| [Mocha][]      | Test with mocha framework | >= 10.0.0                      |         Local          |
+| [Chai][]       | Assert with chai          | >= 4.3.7                       |         Local          |
+| [Jest][]       | Test with Jest framework  | >= 29.3.1                      |         Local          |  
+| [Jasmine][]    | Jasmine                   | >= 4.5                         |         Local          |
+
+1. Prior versions may work, they just haven't been tested.  Report any successes or issues with these!
+2. Indicates whether the bootstrapping process can install these dependencies:
+   1. No: Must be installed prior to using build-tools
+   2. Local: Can be installed by the bootstrapping process, and will be installed locally
+   3. Global: Can be installed by the bootstrapping process, and will be installed globally
+
+# General Dependencies
+
+General dependencies, most commonly the various packages required by a project should be installed using the package 
+manager of choice.
+
+# Limitations
 
 
-
-3. Installing this package will install typescript locally. If you want to run tsc globally, install typescript
-   globally. If you have it installed globally, compare typescript versions to better understand issues, if they occur.
-
-# Creating a project and bootstrapping
 
 # Install
 
@@ -100,4 +123,8 @@ created is described below in [Scaffolding][]
 [typescript]:     https://www.typescriptlang.org/download
 [npm]:            https://docs.npmjs.com/getting-started
 [yarn]:           https://yarnpkg.com/getting-started/install
-[pnpm]:           https://pnpm.io/installation   
+[pnpm]:           https://pnpm.io/installation  
+[mocha]:          https://mochajs.org/#installation
+[chai]:           https://www.chaijs.com/
+[jest]:           https://jestjs.io/docs/getting-started
+[jasmine]:        https://jasmine.github.io/pages/getting_started.html
