@@ -1,6 +1,6 @@
 # Read Me
 
-This^1^ is a base scaffolding package for building and publishing javascript and/or typescript applications to a single
+This<sup>1</sup> is a base scaffolding package for building and publishing javascript and/or typescript applications to a single
 CommonJS and ECMAScript distribution.
 
 # Features
