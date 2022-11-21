@@ -1,0 +1,7 @@
+{
+  "name": "${scope}/${package}",
+  "version": "${version}",
+  "description": "${description}",
+  "author": "${author}",
+  "license": "${License}"
+}
